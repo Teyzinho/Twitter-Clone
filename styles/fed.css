@@ -3,40 +3,70 @@ body{
     margin: 0;
     background-color: rgb(21, 32, 43);
     color: white;
+    font-family: 'Helvetica Neue', sans-serif;
 }
+
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
 .content{
     width: 100%;
     display: flex;
+    justify-content: center;
 }
+
+/* *******************Botões lado esquerdo ***********************/
 
 .container-options{
     width: 26vw;
-    height:60vw;
+    height:100vh;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+.position-fixed:first-child{
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.container-options svg{
+    width: 25px;
 }
 
 .options-head{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
+    width: 250px;
 }
 
 .options-head .optios-btn{
     width:fit-content;
     border-radius: 25px;
-    padding: 10px;
+    padding: 5px 20px 5px 20px;
     transition: all 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
+}
+
+.options-head .optios-btn:first-child{
+    border-radius: 100%;
+    padding: 10px 20px 10px 20px;
 }
 
 .options-head .optios-btn p{
     color: white;
-    font-size: 25px;
+    font-size: 1.25rem;
     margin: 0;
     padding: 0 0 0 15px;
 }
@@ -46,36 +76,118 @@ body{
     cursor: pointer;
 }
 
-.container-feed{
-    min-width: 500px;
-    width: 40vw;
-    height:60vw;
-    border: 1px gray solid;
-    border-top: none;
+.optios-btn-tw .tweetar{
+    width: 225px;
+    height: 50px; 
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(29, 156, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-search{
-    width: 33vw;
-    height:60vw;
-    padding-left: 25px;
+.options-bottom{
+    width: 250px;
+    margin: 0 10px 25px 0;
+}
+
+.options-bottom .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 5px 20px 5px 20px;
+    transition: all 0.2s;
+}
+
+.options-bottom .profile:hover{
+    background-color: rgba(255, 255, 255, 0.295);
+    cursor: pointer;
+}
+
+.options-bottom .profile span{
+    padding-left: 10px;
+}
+
+.options-bottom .profile span p{
+    margin: 0;
+}
+
+.options-bottom .profile span p:first-child{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.options-bottom .profile span p:last-child{
+    font-size: 0.9rem;
+    color: rgb(139, 152, 165);
+}
+
+
+/* ********************Feed********************** */
+
+.container-feed{
+    width: 600px;
+    height:1500px;
+    border: 1px gray solid;
+    border-top: none;
+    border-bottom: none;
 }
 
 .feed-head{
-    width: max-content;
+    width: 598px;
     position: fixed;
+    border-bottom: 1px solid gray;
+    background-color: rgba(21, 32, 43, 0.649);
+    backdrop-filter: blur(10px);
 }
 
-.feed-head p{
+.feed-head h1{
     color: white;
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0;
-    padding-left: 20px;
-    background-color: rgba(21, 32, 43, 0.649);
+    padding: 10px 0 0 20px;
+}
+
+.feed-head .forU-follow-btn{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+.feed-head .forU-follow-btn button{
+    width: 100%;
+    border: none;
+    background:none;
+    color: white;
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.feed-head .forU-follow-btn button:hover{
+    background-color: rgba(42, 54, 68, 0.575);
+}
+
+.feed-head .forU-follow-btn button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 4.25rem;
+    height: 5px;
+    background-color: rgb(29, 155, 240);
+    border-radius: 5px;
+    z-index: 1;
 }
 
 .send-post{
-    padding-top: 70px;
+    width: 598px;
+    padding-top: 120px;
     display: flex;
     gap: 20px;
     padding-left: 20px;
@@ -83,8 +195,8 @@ body{
 }
 
 .profile-picture{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
 }
 
@@ -94,22 +206,36 @@ body{
     flex-direction: column;
 }
 
-.publish input{
+.publish input[type="text"]{
     width: 95%;
     height: 50px;
     background-color: rgba(250, 235, 215, 0);
     border: none;
-    font-size: 28px;
+    font-size: 1.25rem;
+    color: white;
 }
 
-.publish input:active{
-    border: none;
+.publish input[type="text"]:focus{
+    outline: none;
+    /* caret-color: #FFF; */
+}
+
+
+.publish-options button[type="submit"]{
+    width: 90px;
+    height: 35px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(29, 156, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .publish-options{
     width: 95%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -117,58 +243,178 @@ body{
 
 .publish-options .svgs{
     display: flex;
+    color: rgb(29, 155, 240);
+    gap: 5px;
+}
+
+.publish-options .svgs i{
+    display: flex;
     border-radius: 100%;
-    width: 42px;
-    height: 42px;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
+    padding: 5px;
+    cursor: pointer;
 }
 
-.publish-options .svgs:hover{
+.publish-options .svgs i svg{
+    width: 18px;
+    height: 18px;
+}
+
+.publish-options .svgs i:hover{
     background-color: rgba(29, 156, 240, 0.34);
 }
 
-.publish-options button{
-    width:125px;
-    height: 50px;
-    border-radius: 25px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(29, 156, 240);
+/* *******Feed Content ********* */
+
+.feed-content{
+    width: 598px;
+    
+}
+
+.postage{
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    border-bottom: 1px solid gray;
+}
+
+.postage .postage-header{
+    display: flex;
+    gap: 5px;
+}
+
+.postage-content{
+    padding-left: 5px;
+}
+
+.profile-name{
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.profile-name:hover{
+    color: #FFF;
+    text-decoration: underline 1px solid white;
+}
+
+.profile-id{
+    font-size: 0.9rem;
+    color: rgb(139, 152, 165);
+}
+
+.postage-body img{
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.reactions{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 0px 0;
+}
+
+.reactions span{
+    display: flex;
+    font-size: 0.8rem;
+    gap: 15px;
+    color: rgb(139, 152, 165);
+}
+
+.reactions span svg{
+    width: 15px;
+    height: 15px;
+}
+
+.reactions span svg::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 4.25rem;
+    height: 5px;
+    background-color: rgb(29, 155, 240);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.reactions span:hover{
+
+}
+
+/* ****************** Search Container **************** */
+
+.container-search{
+    width: 33vw;
+    height:60vw;
+    padding-left: 25px;
+
+}
+
+.search-form-box{
+    position: relative;
+    width: 360px;
+    height: 40px;
+}
+
+.bg-form{
+    background-color: rgba(21, 32, 43, 0.649);
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 999;
 }
 
 .search-form{
     margin-top: 10px;
-    width: 450px;
+    width: 360px;
+    height: 40px;
     background-color: rgb(30, 39, 50);
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: darkgrey;
+
 }
 
 .search-form i{
     padding-left: 25px;
+
+}
+
+.search-form svg{
+    width: 15px;
 }
 
 .search-form input[type="search"]{
     width: 100%;
-    height: 100%;
+    height: 40px;
     border: none;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0);
-    height: 50px;
+    color: #FFF;
+    padding-left: 20px;
+    font-size: 0.9rem;
 }
 
-.search-form input[type="search"]::-ms-tooltip{
-    background-color: aqua;
+.search-form input[type="search"]:focus{
+    outline: none;
+}
+
+.search-content-box{
+    position: fixed;
+    transition: all 0.2s;
 }
 
 .popular-content{
     margin-top: 25px;
-    width: 450px;
-    height: 500px;
+    width: 360px;
+    height: fit-content;
     border-radius: 20px;
     background-color: rgb(30, 39, 50);
 }
@@ -178,8 +424,8 @@ body{
 }
 
 .popular-content .title{
-    font-size: 26px;
-    font-weight: 900;
+    font-size: 1.25rem;
+    font-weight: 700;
     padding: 20px 0 0 20px;
 }
 
@@ -188,50 +434,97 @@ body{
     height: fit-content;
     background-color: rgb(30, 39, 50);
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .popular-content-now:hover{
     background-color: rgb(42, 54, 68);
 }
 
+.show-More{
+    padding: 10px 0 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.show-More:hover{
+    background-color: rgb(42, 54, 68);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.show-More a{
+    text-decoration: none;
+    color: rgb(29, 155, 240);
+}
+
 .popular-content-now .head{
-    font-size: 22px;
+    font-size: 1rem;
     font-weight: 700;
     padding: 0;
     margin: 0;
 }
 
 .popular-content-now .text{
-    font-size: 20px;
+    font-size: 1rem;
     color: rgb(139, 152, 165);
     padding: 0;
     margin: 0;
 }
 
 .popular-content-now .quantity{
+    font-size: 0.75rem;
     color:rgb(139, 152, 165);
+    padding: 0;
+    margin: 0;
 }
 
 .who-follow{
     margin-top: 25px;
-    width: 450px;
-    height: 500px;
+    width: 360px;
+    height: fit-content;
     border-radius: 20px;
     background-color: rgb(30, 39, 50);
 }
 
 .who-follow .title{
-    font-size: 26px;
-    font-weight: 900;
+    font-size: 1.25rem;
+    font-weight: 750;
     padding: 20px 0 0 20px;
 }
 
 .who-follow .profile{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+.who-follow .profile:hover{
+    background-color: rgb(42, 54, 68);
 }
 
 .who-follow .profile span{
-    padding-left: 25px;
+    padding-left: 10px;
+}
+
+.who-follow .profile span p{
+    margin: 0;
+}
+
+.who-follow .profile span p:first-child{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.who-follow .profile span p:last-child{
+    font-size: 0.9rem;
+    color: rgb(139, 152, 165);
+}
+
+.who-follow .profile button{
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
