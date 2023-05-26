@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background-color: rgb(21, 32, 43);
@@ -8,7 +8,7 @@ body{
 
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
-.content{
+.content {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -16,9 +16,13 @@ body{
 
 /* *******************Botões lado esquerdo ***********************/
 
-.container-options{
+a{
+    text-decoration: none;
+}
+
+.container-options {
     width: 26vw;
-    height:100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -27,13 +31,13 @@ body{
     top: 0;
 }
 
-.position-fixed{
+.position-fixed {
     position: fixed;
 }
 
-.opt-box{
+.opt-box {
     display: flex;
-    height:100vh;
+    height: 100vh;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
@@ -41,19 +45,19 @@ body{
 }
 
 
-.container-options svg{
+.container-options svg {
     width: 25px;
 }
 
-.options-head{
+.options-head {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 250px;
 }
 
-.options-head .optios-btn{
-    width:fit-content;
+.options-head .optios-btn {
+    width: fit-content;
     border-radius: 25px;
     padding: 5px 20px 5px 20px;
     transition: all 0.2s;
@@ -62,26 +66,26 @@ body{
     align-items: center;
 }
 
-.options-head .optios-btn:first-child{
+.options-head .optios-btn:first-child {
     border-radius: 100%;
     padding: 10px 20px 10px 20px;
 }
 
-.options-head .optios-btn p{
+.options-head .optios-btn p {
     color: white;
     font-size: 1.25rem;
     margin: 0;
     padding: 0 0 0 15px;
 }
 
-.options-head .optios-btn:hover{
+.options-head .optios-btn:hover {
     background-color: rgba(255, 255, 255, 0.295);
     cursor: pointer;
 }
 
-.optios-btn-tw .tweetar{
+.optios-btn-tw .tweetar {
     width: 225px;
-    height: 50px; 
+    height: 50px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: 600;
@@ -92,12 +96,12 @@ body{
 }
 
 
-.options-bottom{
+.options-bottom {
     width: 250px;
     margin: 0 10px 25px 0;
 }
 
-.options-bottom .profile{
+.options-bottom .profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,90 +110,87 @@ body{
     transition: all 0.2s;
 }
 
-.options-bottom .profile:hover{
+.options-bottom .profile:hover {
     background-color: rgba(255, 255, 255, 0.295);
     cursor: pointer;
 }
 
-.options-bottom .profile span{
+.options-bottom .profile span {
     padding-left: 10px;
 }
 
-.options-bottom .profile span p{
+.options-bottom .profile span p {
     margin: 0;
 }
 
-.options-bottom .profile span p:first-child{
+.options-bottom .profile span p:first-child {
     font-size: 1rem;
     font-weight: 700;
 }
 
-.options-bottom .profile span p:last-child{
+.options-bottom .profile span p:last-child {
     font-size: 0.9rem;
     color: rgb(139, 152, 165);
 }
 
-@media screen and (max-width: 1275px){
-    .options-head p{
+@media screen and (max-width: 1275px) {
+    .options-head p {
         display: none;
         padding: 0;
         width: 0;
     }
 
-    .options-head{
+    .options-head {
         width: fit-content;
         margin-right: 20px;
     }
 
-    .optios-btn-tw{
+    .optios-btn-tw {
         width: fit-content;
     }
 
-    .optios-btn-tw .tweetar{
+    .optios-btn-tw .tweetar {
         width: 55px;
         height: 55px;
     }
 
-    .options-bottom{
+    .options-bottom {
         width: fit-content;
     }
 
-    .options-bottom .profile span{
+    .options-bottom .profile span {
         display: none;
     }
 
-    .options-bottom .profile svg{
+    .options-bottom .profile svg {
         display: none;
     }
 
-    .container-options{
+    .container-options {
         width: fit-content;
     }
 
 }
 
-
-
 /* ********************Feed********************** */
 
-.container-feed{
+.container-feed {
     width: 600px;
-    height:max-content;
-    border: 1px gray solid;
+    border: 1px rgba(128, 128, 128, 0.4) solid;
     border-top: none;
     border-bottom: none;
 }
 
-.feed-head{
+.feed-head {
     width: 100%;
     max-width: 598px;
     position: fixed;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
     background-color: rgba(21, 32, 43, 0.649);
     backdrop-filter: blur(10px);
 }
 
-.feed-head h1{
+.feed-head h1 {
     color: white;
     font-size: 1.25rem;
     font-weight: 600;
@@ -197,29 +198,31 @@ body{
     padding: 10px 0 0 20px;
 }
 
-.feed-head .forU-follow-btn{
+.feed-head .forU-follow-btn {
     display: flex;
     margin-top: 10px;
     width: 100%;
 }
-.feed-head .forU-follow-btn button{
+
+.feed-head .forU-follow-btn button {
     width: 100%;
     border: none;
-    background:none;
-    color: white;
+    background: none;
+    color: rgb(139, 152, 165);
     padding: 20px 0 20px 0;
     display: flex;
     justify-content: center;
 
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.feed-head .forU-follow-btn button:hover{
-    background-color: rgba(42, 54, 68, 0.575);
+.btn-active{
+    color: #fff !important;
+    font-weight: 600 !important;
 }
 
-.feed-head .forU-follow-btn button::after{
+.btn-active::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -230,29 +233,33 @@ body{
     z-index: 1;
 }
 
-.send-post{
+.feed-head .forU-follow-btn button:hover {
+    background-color: rgba(42, 54, 68, 0.575);
+}
+
+.send-post {
     width: 100%;
     padding-top: 120px;
     display: flex;
     gap: 20px;
     padding-left: 20px;
-    border-bottom: 1px gray solid;
+    border-bottom: 1px rgba(128, 128, 128, 0.4) solid;
 }
 
-.profile-picture{
+.profile-picture {
     width: 50px;
     height: 50px;
     border-radius: 100%;
     object-fit: cover;
 }
 
-.publish{
+.publish {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.publish input[type="text"]{
+.publish input[type="text"] {
     width: 95%;
     height: 50px;
     background-color: rgba(250, 235, 215, 0);
@@ -261,13 +268,13 @@ body{
     color: white;
 }
 
-.publish input[type="text"]:focus{
+.publish input[type="text"]:focus {
     outline: none;
     /* caret-color: #FFF; */
 }
 
 
-.publish-options button[type="submit"]{
+.publish-options button[type="submit"] {
     width: 90px;
     height: 35px;
     border-radius: 25px;
@@ -279,7 +286,7 @@ body{
     justify-content: center;
 }
 
-.publish-options{
+.publish-options {
     width: 95%;
     padding: 10px 0 10px 0;
     display: flex;
@@ -287,13 +294,13 @@ body{
     align-items: flex-end;
 }
 
-.publish-options .svgs{
+.publish-options .svgs {
     display: flex;
     color: rgb(29, 155, 240);
     gap: 5px;
 }
 
-.publish-options .svgs i{
+.publish-options .svgs i {
     display: flex;
     border-radius: 100%;
     align-items: center;
@@ -303,42 +310,43 @@ body{
     cursor: pointer;
 }
 
-.publish-options .svgs i svg{
+.publish-options .svgs i svg {
     width: 18px;
     height: 18px;
 }
 
-.publish-options .svgs i:hover{
+.publish-options .svgs i:hover {
     background-color: rgba(29, 156, 240, 0.34);
 }
 
 /* *******Feed Content ********* */
 
-.feed-content{
+.feed-content {
     width: 100%;
-    
+
 }
 
-.postage{
+.postage {
     display: flex;
     padding: 10px 15px 10px 15px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
     transition: all 0.2s;
     cursor: pointer;
 }
 
-.postage:hover{
-    background: rgb(255,255,255,0.03);
+.postage:hover {
+    background: rgb(255, 255, 255, 0.03);
 }
 
-.postage .postage-header ,.postagefull .postage-header{
+.postage .postage-header,
+.postagefull .postage-header {
     display: flex;
     justify-content: space-between;
     gap: 5px;
 
 }
 
-.three-dots div{
+.three-dots div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -349,54 +357,55 @@ body{
     transition: background 0.2s;
 }
 
-.three-dots div:hover{
+.three-dots div:hover {
     color: rgb(29, 115, 240);
-    background: rgb(29, 115, 240,0.1);
+    background: rgb(29, 115, 240, 0.1);
 }
 
-.postage-content{
+.postage-content {
     padding-left: 5px;
 }
 
-.profile-name{
+.profile-name {
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     color: #FFF;
 }
 
-.profile-name:hover{
+.profile-name:hover {
     color: #FFF;
     text-decoration: underline 1px solid white;
 }
 
-.profile-id,.time{
+.profile-id,
+.time {
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
     color: rgb(139, 152, 165);
 }
 
-.postage-body img{
+.postage-body img {
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
 }
 
-.postage-title{
+.postage-title {
     font-size: 1rem;
     margin: 0;
     padding: 0 0 10px 0;
 }
 
-.reactions{
+.reactions {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px 0px 0px 0;
 }
 
-.reactions span{
+.reactions span {
     display: flex;
     font-size: 0.8rem;
     align-items: center;
@@ -405,64 +414,69 @@ body{
     cursor: pointer;
 }
 
-.reactions span svg{
+.reactions span svg {
     width: 15px;
     height: 15px;
     margin: 0;
     padding: 0;
 }
 
-.reactions span div{
+.reactions span div {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 35px;
     height: 35px;
     border-radius: 100%;
-    background:none;
+    background: none;
     transition: background 0.2s;
 }
 
-.reactions span:hover div{
+.reactions span:hover div {
     color: rgb(29, 115, 240);
-    background: rgb(29, 115, 240,0.1);
+    background: rgb(29, 115, 240, 0.1);
 }
 
-.reactions span p{
+.reactions span p {
     margin: 0;
     padding: 0;
 }
 
-.reactions .retweet:hover div{
+.reactions .retweet:hover div {
     color: rgb(0, 186, 124);
-    background: rgb(0, 186, 124,0.1);
+    background: rgb(0, 186, 124, 0.1);
 }
 
-.reactions .like:hover div{
+.reactions .like:hover div {
     color: rgb(249, 24, 128);
-    background: rgb(249, 24, 128,0.1);
+    background: rgb(249, 24, 128, 0.1);
 }
 
-@media screen and (max-width: 690px){
-    .container-feed{
+@media screen and (max-width: 690px) {
+    .container-feed {
         min-width: 300px;
     }
-    .feed-head{
+
+    .feed-head {
         min-width: 300px;
     }
-    .send-post{
+
+    .send-post {
         min-width: 300px;
     }
-    .postage{
+
+    .postage {
         min-width: 300px;
     }
 }
 
 /* *********fullscreen Postage ******** */
-.fullscreen-postage{
+.fullscreen-postage {
     position: fixed;
     background-color: rgb(21, 32, 43);
-    width: 598px;
+    max-width: 598px;
+    width: 100%;
+    min-width: 350px;
     height: 100vh;
     top: 0;
     overflow: hidden;
@@ -475,24 +489,24 @@ body{
 
 .fullscreen-postage::-webkit-scrollbar {
     width: 6px;
-  }
-  
-  .fullscreen-postage::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  .fullscreen-postage::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
+}
 
-.go-back{
+.fullscreen-postage::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.fullscreen-postage::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.go-back {
     display: flex;
     padding: 10px 0 10px 10px;
     align-items: center;
     gap: 30px;
 }
 
-.go-back a{
+.go-back a {
     color: white;
     width: 30px;
     height: 30px;
@@ -503,89 +517,90 @@ body{
     transition: background 0.2s;
 }
 
-.go-back a:hover{
-    background: rgb(255,255,255,0.03);
-    
+.go-back a:hover {
+    background: rgb(255, 255, 255, 0.03);
+
 }
 
-.go-back a svg{
+.go-back a svg {
     width: 20px;
     height: 20px;
 }
 
-.go-back h5{
+.go-back h5 {
     font-weight: 700;
 }
 
-.reactions-numbers{
+.reactions-numbers {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.reactions-numbers span{
+
+.reactions-numbers span {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 1rem;
 }
 
-.reactions-numbers span h5{
+.reactions-numbers span h5 {
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
 }
 
-.reactions-numbers span p{
+.reactions-numbers span p {
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
     color: rgb(139, 152, 165);
 }
 
-.fullscreen-postage .reactions{
+.fullscreen-postage .reactions {
     width: 100%;
     justify-content: space-around;
     margin: 0;
     padding-top: 0;
 }
 
-.fullscreen-postage .reactions svg{
+.fullscreen-postage .reactions svg {
     width: 20px;
     height: 20px;
 }
 
-.fullscreen-postage .postagefull{
+.fullscreen-postage .postagefull {
     border: none;
     display: flex;
     flex-direction: column;
     /* position: absolute; */
 }
 
-.fullscreen-postage .postage:hover{
+.fullscreen-postage .postage:hover {
     background-color: rgb(21, 32, 43);
     cursor: default;
 }
 
-.fullscreen-postage .send-post{
+.fullscreen-postage .send-post {
     padding-top: 0;
 }
 
 /* ****************** Search Container **************** */
 
-.container-search{
+.container-search {
     width: 33vw;
-    height:100vw;
+    height: 100vw;
     padding-left: 25px;
 
 }
 
-.search-form-box{
+.search-form-box {
     position: relative;
     width: 360px;
     height: 40px;
 }
 
-.bg-form{
+.bg-form {
     background-color: rgba(21, 32, 43, 0.649);
     width: 100%;
     height: 60px;
@@ -594,7 +609,7 @@ body{
     z-index: 999;
 }
 
-.search-form{
+.search-form {
     margin-top: 10px;
     width: 360px;
     height: 40px;
@@ -607,16 +622,16 @@ body{
 
 }
 
-.search-form i{
+.search-form i {
     padding-left: 25px;
 
 }
 
-.search-form svg{
+.search-form svg {
     width: 15px;
 }
 
-.search-form input[type="search"]{
+.search-form input[type="search"] {
     width: 100%;
     height: 40px;
     border: none;
@@ -627,17 +642,17 @@ body{
     font-size: 0.9rem;
 }
 
-.search-form input[type="search"]:focus{
+.search-form input[type="search"]:focus {
     outline: none;
 }
 
-.search-content-box{
+.search-content-box {
     position: sticky;
     transition: all 0.2s;
     top: 20px;
 }
 
-.popular-content{
+.popular-content {
     margin-top: 25px;
     width: 360px;
     height: fit-content;
@@ -645,17 +660,17 @@ body{
     background-color: rgb(30, 39, 50);
 }
 
-.popular-content div{
+.popular-content div {
     padding: 10px 0 10px 20px;
 }
 
-.popular-content .title{
+.popular-content .title {
     font-size: 1.25rem;
     font-weight: 700;
     padding: 20px 0 0 20px;
 }
 
-.popular-content-now{
+.popular-content-now {
     width: 100%;
     height: fit-content;
     background-color: rgb(30, 39, 50);
@@ -663,49 +678,49 @@ body{
     cursor: pointer;
 }
 
-.popular-content-now:hover{
+.popular-content-now:hover {
     background-color: rgb(42, 54, 68);
 }
 
-.show-More{
+.show-More {
     padding: 10px 0 10px 20px;
     cursor: pointer;
     transition: all 0.2s;
     border-radius: 0px 0px 20px 20px;
 }
 
-.show-More:hover{
+.show-More:hover {
     background-color: rgb(42, 54, 68);
     border-radius: 0px 0px 20px 20px;
 }
 
-.show-More a{
+.show-More a {
     text-decoration: none;
     color: rgb(29, 155, 240);
 }
 
-.popular-content-now .head{
+.popular-content-now .head {
     font-size: 1rem;
     font-weight: 700;
     padding: 0;
     margin: 0;
 }
 
-.popular-content-now .text{
+.popular-content-now .text {
     font-size: 1rem;
     color: rgb(139, 152, 165);
     padding: 0;
     margin: 0;
 }
 
-.popular-content-now .quantity{
+.popular-content-now .quantity {
     font-size: 0.75rem;
-    color:rgb(139, 152, 165);
+    color: rgb(139, 152, 165);
     padding: 0;
     margin: 0;
 }
 
-.who-follow{
+.who-follow {
     margin-top: 25px;
     width: 360px;
     height: fit-content;
@@ -713,13 +728,13 @@ body{
     background-color: rgb(30, 39, 50);
 }
 
-.who-follow .title{
+.who-follow .title {
     font-size: 1.25rem;
     font-weight: 750;
     padding: 20px 0 0 20px;
 }
 
-.who-follow .profile{
+.who-follow .profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -727,78 +742,186 @@ body{
     cursor: pointer;
 }
 
-.who-follow .profile:hover{
+.who-follow .profile:hover {
     background-color: rgb(42, 54, 68);
 }
 
-.who-follow .profile span{
+.who-follow .profile span {
     padding-left: 10px;
 }
 
-.who-follow .profile span p{
+.who-follow .profile span p {
     margin: 0;
 }
 
-.who-follow .profile span p:first-child{
+.who-follow .profile span p:first-child {
     font-size: 1rem;
     font-weight: 700;
 }
 
-.who-follow .profile span p:last-child{
+.who-follow .profile span p:last-child {
     font-size: 0.9rem;
     color: rgb(139, 152, 165);
 }
 
-.who-follow .profile button{
+.who-follow .profile button {
     border-radius: 100px;
     font-size: 0.9rem;
     font-weight: 500;
 }
 
-.cellphone-buttons{
-    
+/* **********Cellphone Bottom Btns*************** */
+
+.cellphone-buttons {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background-color: rgba(21, 32, 43);
+    border-top: 1px solid rgba(128, 128, 128, 0.4);
+    display: none;
 }
 
-@media screen and (max-width: 1095px){
+.cellphone-buttons a {
+    color: #fff;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.cellphone-buttons a svg {
+    width: 25px;
+    height: 25px;
+}
+
+.cellphone-buttons a:hover {
+    background: rgb(255, 255, 255, 0.03);
+}
+
+/* **************** Msg Container *************** */
+.msg-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    background-color: rgba(21, 32, 43);
+
+    width: 375px;
+
+    border-radius: 20px 20px 0 0;
+
+    -webkit-box-shadow: 0px -2px 18px -9px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px -2px 18px -9px rgba(255, 255, 255, 1);
+    box-shadow: 0px -2px 18px -9px rgba(255, 255, 255, 1);
+}
+
+.msg-header{
+    padding: 0 15px 0 15px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.msg-header h5{
+    margin: 0;
+    padding: 0;
+}
+
+.msg-header span{
+    display: flex;
+    gap: 15px;
+}
+
+.msg-header svg{
+    width: 20px;
+    height: 20px;
+}
+
+/* *************** msg-body *********** */
+
+.msg-body{
+    transition: all 0.2s;
+    height: 0;
+    overflow: hidden;
+}
+
+.msg-content{
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.msg-content:hover{
+    background: rgb(255, 255, 255, 0.03);
+}
+
+.msg-send{
+    font-size: 0.9rem;
+    color: rgb(139, 152, 165);
+    padding: 0;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1095px) {
 
     /* .container-search{
         width: 350px;
     } */
 
-    .search-form{
+    .search-form {
         width: 350px;
     }
 
-    .popular-content{
+    .popular-content {
         width: 350px;
     }
 
-    .who-follow{
+    .who-follow {
         width: 350px;
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
-    .container-search{
+    .container-search {
         display: none;
     }
 
-    .search-form{
+    .search-form {
         display: none;
     }
 
-    .popular-content{
+    .popular-content {
         display: none;
     }
 
-    .who-follow{
+    .who-follow {
+        display: none;
+    }
+
+    .msg-container{
         display: none;
     }
 }
 
-@media screen and (max-width: 500px){
-    .container-options{
+@media screen and (max-width: 500px) {
+    .container-options {
         display: none;
+    }
+
+    .cellphone-buttons {
+        display: flex;
+    }
+
+    .container-feed {
+        border-left: none;
+        border-right: none;
     }
 }
