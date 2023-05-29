@@ -1,0 +1,45 @@
+.feed-head{
+    top: 10px;
+    width: 100%;
+    max-width: 598px;
+    position: sticky;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: rgba(21, 32, 43, 0.649);
+    backdrop-filter: blur(10px);
+}
+
+.feed-content .not-container{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transform: all 0.2s;
+    gap: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+}
+
+.feed-content .not-container h5{
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+.feed-content .not-container:hover{
+    background: rgb(255, 255, 255, 0.03);
+}  
+
+.not-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.not-content img{
+    width: 40px;
+    height: 40px;
+}
+
+.feed-content svg{
+    width: 30px;
+    height: 30px;
+}

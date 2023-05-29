@@ -1,0 +1,56 @@
+.feed-head{
+    top: 10px;
+    width: 100%;
+    max-width: 598px;
+    position: sticky;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: rgba(21, 32, 43, 0.649);
+    backdrop-filter: blur(10px);
+}
+
+.feed-content div{
+    padding: 10px;
+}
+
+.popular-content-now{
+    background : rgb(21, 32, 43);
+
+}
+
+.popular-content-now:hover {
+    background-color: rgb(255 ,255 ,255 ,0.03);
+}
+
+.feed-content .popular-content-now p{
+    padding: 0;
+    margin: 0;
+}
+
+.feed-content .popular-content-now h2{
+    padding: 0 0 3px 0;
+    margin: 0;
+}
+
+.feed-content .popular-content-now .text{
+    font-size: 0.9rem;
+}
+
+.forU-follow-btn button{
+    min-width: fit-content;
+}
+
+.bg-form{
+    position: relative;
+    height: fit-content;
+    padding: 0 50px 0 10px;
+}
+
+.bg-form .search-form{
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .search-form {
+        display: flex;
+    }
+}

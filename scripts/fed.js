@@ -58,7 +58,7 @@ posts.forEach(post => {
 
 closeBtn.addEventListener('click', closePostModal);
 
-// msg-container
+//  Dunção abrir msg-container
 const msgheader = document.querySelector('.msg-header');
 const msgBody = document.querySelector('.msg-body');
 const arrows = document.querySelector('.arrows');
@@ -73,15 +73,14 @@ function msgOpen(){
     msgBody.style.height ='500px';
     arrows.style.transform = 'rotateX(180deg)'
     open = false
-    console.log(true);
   }else{
     msgBody.style.height ='0';
     arrows.style.transform = 'rotateX(0deg)'
     open = true;
-    console.log(false);
   }
 }
 
+//Função Stilização buttons
 function changeButtonStyle(button) {
   // Remova a classe "active" de todos os botões dentro da div
   var buttons = document.querySelectorAll('.forU-follow-btn button');
