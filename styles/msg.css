@@ -94,6 +94,25 @@
     height: 30px;
 }
 
+.msgs-container .header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.msgs-container .header div:hover{
+    background: rgba(29, 156, 240, 0.1);
+}
+
+
+.msgs-container .header svg{
+    width: 25px;
+    height: 25px;
+}
+
 .msgs-container .header span{
     display: flex;
     align-items: center;
@@ -193,8 +212,30 @@
     outline: none;
 }
 
+@media screen and (max-width: 1001px) {
+    .msgs-persons{
+       display: block;
+    }
+
+}
+
 @media screen and (max-width: 1000px) {
+    .msgs-persons{
+        width: 600px;
+        min-width: 300px;
+    }
+
     .msgs-container{
+        width: 600px;
+        min-width: 300px;
         display: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        /* position: relative; */
+    }
+}
+
+@media screen and (max-width:500px){
+    .msgs-container .footer{
+        bottom:50px;
     }
 }
